@@ -1,3 +1,4 @@
+import React from 'react';
 import ShoppingList from "../components/ShoppingList";
 
 const ShoppingListContainer = () => {
