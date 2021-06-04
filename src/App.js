@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import ShoppingList from './components/ShoppingList';
+import ShoppingList from './containers/ShoppingListContainer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ShoppingList name='Chris' />
+        <ShoppingList />
       </header>
     </div>
   );
