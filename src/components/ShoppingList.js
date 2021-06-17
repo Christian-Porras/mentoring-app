@@ -29,8 +29,8 @@ const ShoppingList = ({name, list}) => {
     return shoppingList.map((item) => {
       return (
         <div key={item}>
-          <input type="checkbox" key={item} onChange={handleCheck} />
-          <label key={item}> {item} </label>
+          <input type="checkbox" key={`${item}-input`} onChange={handleCheck} />
+          <label key={`${item}-label`}> {item} </label>
         </div>
       );
     });
