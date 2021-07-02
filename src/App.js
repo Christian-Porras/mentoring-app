@@ -1,14 +1,16 @@
 import React from 'react';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import './App.scss';
 import ShoppingApp from './components/ShoppingApp';
 
 function App() {
   return (
-    <div className="App">
+    <Container fluid className="App">
       <header className="App-header">
         <ShoppingApp />
       </header>
-    </div>
+    </Container>
   );
 }
 
