@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(PropTypes.string).isRequired
+  list: PropTypes.arrayOf(PropTypes.string).isRequired,
+  perishable: PropTypes.bool.isRequired
 }
 
 const defaultProps = {
 
 }
 
-const ShoppingList = ({name, list}) => {
+const ShoppingList = ({name, list, perishable}) => {
   const [checked, setChecked] = useState(0);
 
   const handleCheck = (event) => {
@@ -43,6 +44,8 @@ const ShoppingList = ({name, list}) => {
         {renderList(list)}
       </div>
 
+      <span> We have a perishable item? {perishable} </span>
+      <br/>
       <span> Items in cart: {checked}/{list.length} </span>
     </div>
   )
