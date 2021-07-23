@@ -13,12 +13,7 @@ const defaultProps = {
 }
 
 const ShoppingListContainer = ({name, item, perishable}) => {
-  const item_list = [
-    'Milk',
-    'Eggs',
-    'Bacon',
-    'Soda'
-  ]
+  const item_list = [];
 
   item_list.push(item);
 

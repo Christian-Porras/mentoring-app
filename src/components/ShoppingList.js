@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(PropTypes.string).isRequired,
-  perishable: PropTypes.bool.isRequired
+  list: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 const defaultProps = {
 
 }
 
-const ShoppingList = ({name, list, perishable}) => {
+const ShoppingList = ({name, list}) => {
   const [checked, setChecked] = useState(0);
 
   const handleCheck = (event) => {
@@ -29,9 +28,9 @@ const ShoppingList = ({name, list, perishable}) => {
   const renderList = (shoppingList) => {
     return shoppingList.map((item) => {
       return (
-        <div key={item}>
-          <input type="checkbox" key={`${item}-input`} onChange={handleCheck} />
-          <label key={`${item}-label`}> {item} </label>
+        <div key={item.name}>
+          <input type="checkbox" key={`${item.name}-input`} onChange={handleCheck} />
+          <label key={`${item.name}-label`}> {item.name} </label>
         </div>
       );
     });
@@ -44,7 +43,13 @@ const ShoppingList = ({name, list, perishable}) => {
         {renderList(list)}
       </div>
 
-      <span> We have a perishable item? {perishable} </span>
+      <span> We have a perishable item?
+        {
+          list.find(item => {
+            return item.perishable === "true"
+          }) ? " yes" : " no"
+        }
+      </span>
       <br/>
       <span> Items in cart: {checked}/{list.length} </span>
     </div>

@@ -5,14 +5,11 @@ import ListForm from './ListForm';
 
 const ShoppingApp = () => {
   const [name, setName] = useState('');
-  const [item, setItem] = useState('');
-  const [perishable, setPerishable] = useState('');
+  const [item, setItem] = useState({});
 
   const onSubmit = (values) => {
     setName(values.name);
     setItem(values.item);
-    console.log(values.perishable);
-    setPerishable(values.perishable);
   }
 
   return(
@@ -21,7 +18,7 @@ const ShoppingApp = () => {
         <ListForm name={name} item={item} onSubmit={onSubmit}/>
       </Col>
       <Col xs={6}>
-        <ShoppingListContainer name={name} item={item} perishable={perishable}/>
+        <ShoppingListContainer name={name} item={item}/>
       </Col>
     </Row>
   );
