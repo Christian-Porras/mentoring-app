@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(PropTypes.string).isRequired
+  list: PropTypes.arrayOf(PropTypes.string)
 }
 
 const defaultProps = {
-
+  list: []
 }
 
 const ShoppingList = ({name, list}) => {

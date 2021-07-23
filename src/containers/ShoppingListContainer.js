@@ -4,21 +4,19 @@ import ShoppingList from "../components/ShoppingList";
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  item: PropTypes.string.isRequired,
-  perishable: PropTypes.bool.isRequired
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    perishable: PropTypes.bool.isRequired
+  })),
 }
 
 const defaultProps = {
 
 }
 
-const ShoppingListContainer = ({name, item, perishable}) => {
-  const item_list = [];
-
-  item_list.push(item);
-
+const ShoppingListContainer = ({name, items}) => {
   return (
-    <ShoppingList name={name} list={item_list} perishable={perishable}/>
+    <ShoppingList name={name} list={items}/>
   )
 }
 

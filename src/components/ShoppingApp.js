@@ -5,20 +5,20 @@ import ListForm from './ListForm';
 
 const ShoppingApp = () => {
   const [name, setName] = useState('');
-  const [item, setItem] = useState({});
+  const [items, setItems] = useState([]);
 
   const onSubmit = (values) => {
     setName(values.name);
-    setItem(values.item);
+    setItems(values.items);
   }
 
   return(
     <Row>
       <Col xs={6}>
-        <ListForm name={name} item={item} onSubmit={onSubmit}/>
+        <ListForm name={name} items={items} onSubmit={onSubmit}/>
       </Col>
       <Col xs={6}>
-        <ShoppingListContainer name={name} item={item}/>
+        <ShoppingListContainer name={name} items={items}/>
       </Col>
     </Row>
   );
