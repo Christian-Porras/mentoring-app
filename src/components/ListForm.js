@@ -46,7 +46,7 @@ const ListForm = ({values, handleSubmit, handleChange, errors}) => {
 
       <FieldArray
         name="items"
-        render={({push}) => (
+        render={({push, remove}) => (
           <div>
             {
               values.items && (
@@ -55,6 +55,7 @@ const ListForm = ({values, handleSubmit, handleChange, errors}) => {
                     <label>
                       Item:
                       <input type="text" name={`items.${index}.name`} value={item.name} onChange={handleChange}/>
+                      <button onClick={() => remove(index)} type="button"> Remove Field </button>
                     </label>
                     <label>
                       Perishable?
