@@ -2,6 +2,15 @@
 var express = require('express');
 var { graphqlHTTP } = require('express-graphql');
 var { buildSchema } = require('graphql');
+const { Client } = require('pg')
+
+const client = new Client({
+  host: "localhost",
+  user: "postgres",
+  password: "",
+  database: "grocerylist"
+})
+client.connect()
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
@@ -11,6 +20,7 @@ var schema = buildSchema(`
   }
 
   type Item {
+    id: Int!
     name: String!
     perishable: Boolean!
   }
@@ -26,21 +36,10 @@ var schema = buildSchema(`
 
 // The root provides a resolver function for each API endpoint
 var root = {
-  getItems: () => {
-    return [
-      {
-        name: 'Bread',
-        perishable: false,
-      },
-      {
-        name: 'Milk',
-        perishable: true,
-      },
-      {
-        name: 'Eggs',
-        perishable: true,
-      },
-    ]
+  getItems: async () => {
+    const { rows } = await client.query("SELECT * FROM Items;");
+    console.log(rows);
+    return rows;
   },
 
   saveItems: (itemInputs) => {

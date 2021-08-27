@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Christian-Porras/mentoring-appstatic/css/main.23b91eda.chunk.css",
+    "main.js": "/Christian-Porras/mentoring-appstatic/js/main.2ef37bae.chunk.js",
+    "main.js.map": "/Christian-Porras/mentoring-appstatic/js/main.2ef37bae.chunk.js.map",
+    "runtime-main.js": "/Christian-Porras/mentoring-appstatic/js/runtime-main.8d972d7e.js",
+    "runtime-main.js.map": "/Christian-Porras/mentoring-appstatic/js/runtime-main.8d972d7e.js.map",
+    "static/css/2.fb17aa6d.chunk.css": "/Christian-Porras/mentoring-appstatic/css/2.fb17aa6d.chunk.css",
+    "static/js/2.ea0a39c3.chunk.js": "/Christian-Porras/mentoring-appstatic/js/2.ea0a39c3.chunk.js",
+    "static/js/2.ea0a39c3.chunk.js.map": "/Christian-Porras/mentoring-appstatic/js/2.ea0a39c3.chunk.js.map",
+    "static/js/3.9f92f95b.chunk.js": "/Christian-Porras/mentoring-appstatic/js/3.9f92f95b.chunk.js",
+    "static/js/3.9f92f95b.chunk.js.map": "/Christian-Porras/mentoring-appstatic/js/3.9f92f95b.chunk.js.map",
+    "index.html": "/Christian-Porras/mentoring-appindex.html",
+    "static/css/2.fb17aa6d.chunk.css.map": "/Christian-Porras/mentoring-appstatic/css/2.fb17aa6d.chunk.css.map",
+    "static/css/main.23b91eda.chunk.css.map": "/Christian-Porras/mentoring-appstatic/css/main.23b91eda.chunk.css.map",
+    "static/js/2.ea0a39c3.chunk.js.LICENSE.txt": "/Christian-Porras/mentoring-appstatic/js/2.ea0a39c3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d972d7e.js",
+    "static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.ea0a39c3.chunk.js",
+    "static/css/main.23b91eda.chunk.css",
+    "static/js/main.2ef37bae.chunk.js"
+  ]
+}
