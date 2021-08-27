@@ -43,8 +43,13 @@ var root = {
   },
 
   saveItems: (itemInputs) => {
-    const returnValue = itemInputs.input;
-    return returnValue;
+    const items = itemInputs.input.map(async (input) => {
+      const { rows } = await client.query("INSERT INTO items (name, perishable) VALUES ($1, $2) RETURNING *", [input.name, input.perishable]);
+      console.log(rows);
+      return rows[0];
+    });
+
+    return items;
   }
 };
 
